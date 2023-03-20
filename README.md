@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# Cocktail Book
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Tech
+- created by create-react-app (typescript)
 
-## Available Scripts
+### Plan
+- 3 pages -> Home, search and favourites
+- use routes to pages.
 
-In the project directory, you can run:
+- Common Components
+  - Tile / Card to show the minimized information of a cocktail
 
-### `npm start`
+- Home
+  - load random 5 apis 
+  - Refresh button should reload the same
+  - handle api loading issues.
+  - use common component to show the list of result
+  - Show images (use different sizes of image)
+  
+- Search
+  - API support multiple search critiers (name, ingredient,alcoholic, category)
+  - show the search query in the URL
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Favourites
+  - Data should be saved on the localstorage
+  - the favourited items should be indicated all over the site with heart icon
+  - users can make a item favourite from anywhere in the site. 
+  - show the list of selected items in one place. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+key checklists
+- responsiveness
+- use redux as a state management lib
+- use only latest functional components and hooks
+- handle loading uis
+- handle error uis
+- handle not found / empty pages correctly
+- 
