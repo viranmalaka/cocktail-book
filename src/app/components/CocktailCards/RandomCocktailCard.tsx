@@ -1,6 +1,6 @@
 import React from 'react';
-import RectangleCocktailCard from './RectangleCocktailCard';
 import { useFetchRandomCocktail } from '../../hooks/react-query/useFetchRandomCocktail';
+import CocktailDetailsCardWithFav from './CocktailDetailsCardWithFav';
 
 type RandomCocktailCardProps = {
   index: string;
@@ -9,7 +9,7 @@ type RandomCocktailCardProps = {
 const RandomCocktailCard = ({ index }: RandomCocktailCardProps) => {
   const { data, isFetching } = useFetchRandomCocktail(index);
 
-  return <RectangleCocktailCard cocktail={data} isLoading={isFetching} />;
+  return <CocktailDetailsCardWithFav cocktail={data} loading={isFetching} />;
 };
 
 export default RandomCocktailCard;

@@ -3,7 +3,7 @@ import useSearchResults from '../hooks/react-query/useSearchResults';
 import Loader from './Loader/Loader';
 import NoDataView from './NoDataView/NoDataView';
 import FlexBox from './FlexBox';
-import RectangleCocktailCard from './CocktailCards/RectangleCocktailCard';
+import CocktailDetailsCardWithFav from './CocktailCards/CocktailDetailsCardWithFav';
 
 const SearchResults = () => {
   const { data, isLoading } = useSearchResults();
@@ -19,7 +19,7 @@ const SearchResults = () => {
   return (
     <FlexBox wrap justifyContent="center">
       {data?.map((cocktail) => (
-        <RectangleCocktailCard key={cocktail.id} cocktail={cocktail} isLoading={false} />
+        <CocktailDetailsCardWithFav key={cocktail.id} cocktail={cocktail} loading={false} />
       ))}
     </FlexBox>
   );

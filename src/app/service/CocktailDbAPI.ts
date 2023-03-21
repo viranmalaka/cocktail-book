@@ -17,6 +17,12 @@ class CocktailDbAPI {
 
     return api.get<CocktailDBResponse>(`search.php${query}`).then((result) => result.data);
   }
+
+  static getCocktailDetailsById(id: string) {
+    const api = ApiService.getInstance();
+
+    return api.get<CocktailDBResponse>(`lookup.php?i=${id}`).then((result) => result.data);
+  }
 }
 
 export default CocktailDbAPI;

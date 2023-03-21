@@ -10,7 +10,7 @@ const SearchByFirstLetter = () => {
     <div className="filter-by-first-letter-wrapper">
       <div className="title">Filter By Fist Letter: </div>
       {englishAlphabet.map((letter) => (
-        <Link to={{ pathname: '/search', search: `f=${letter}` }} className="link">
+        <Link to={{ pathname: '/search', search: `f=${letter}` }} key={letter} className="link">
           {letter}
         </Link>
       ))}

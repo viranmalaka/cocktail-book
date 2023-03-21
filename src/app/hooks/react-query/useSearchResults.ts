@@ -9,17 +9,11 @@ const useSearchResults = () => {
   return useQuery(
     ['search', search],
     async () => {
-      try {
-        const response = await CocktailDbAPI.searchCocktail(search);
-        if (response.drinks) {
-          return response.drinks.map(mapCocktailDBResponse);
-        } else {
-          return [];
-        }
-      } catch (e) {
-        console.log(e);
-        throw e;
+      const response = await CocktailDbAPI.searchCocktail(search);
+      if (response.drinks) {
+        return response.drinks.map(mapCocktailDBResponse);
       }
+      return [];
     },
     { staleTime: Infinity },
   );

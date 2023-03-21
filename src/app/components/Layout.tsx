@@ -17,9 +17,9 @@ const Layout = (props: PropsWithChildren<LayoutProps>) => {
                 Home
               </Link>
             </FlexBox>
-            <FlexBox>
+            <FlexBox gap="3em">
               <SearchArea />
-              <Link to={'/favourite'} className="header-link">
+              <Link to={'/favourites'} className="header-link">
                 Favourite
               </Link>
             </FlexBox>

@@ -7,9 +7,10 @@ import Loader from '../Loader/Loader';
 type RectangleCocktailCardProps = {
   cocktail?: Cocktail;
   isLoading: boolean;
+  addonActions?: JSX.Element;
 };
 
-const RectangleCocktailCard = ({ cocktail, isLoading }: RectangleCocktailCardProps) => {
+const RectangleCocktailCard = ({ cocktail, isLoading, addonActions }: RectangleCocktailCardProps) => {
   return (
     <div className="rectangle-cocktail-card-wrapper">
       {isLoading && <Loader />}
@@ -17,6 +18,7 @@ const RectangleCocktailCard = ({ cocktail, isLoading }: RectangleCocktailCardPro
         <>
           <div className="image">
             <ImageLoader wrapperClass="loader" src={cocktail.image} alt={cocktail.name} />
+            {addonActions && <div className="addon-actions">{addonActions}</div>}
           </div>
           <div className="content">
             <h3 className="name">{cocktail.name}</h3>

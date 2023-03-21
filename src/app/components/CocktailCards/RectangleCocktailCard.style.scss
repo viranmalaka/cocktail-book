@@ -13,6 +13,7 @@
   }
 
   .image {
+    position: relative;
     .loader {
       width: 12em;
 
@@ -20,6 +21,11 @@
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
       }
+    }
+    .addon-actions {
+      position: absolute;
+      top: 0.2em;
+      right: 0.4em;
     }
   }
   .content {

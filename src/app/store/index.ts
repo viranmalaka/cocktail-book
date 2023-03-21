@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cocktailReducer from './cocktail.store';
+import favouriteReducer from './favourite.store';
 
 export const store = configureStore({
   reducer: {
     cocktail: cocktailReducer,
+    favourite: favouriteReducer,
   },
 });
 

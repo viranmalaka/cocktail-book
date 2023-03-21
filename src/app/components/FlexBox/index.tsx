@@ -7,6 +7,7 @@ type FlexBoxProps = {
   direction?: 'row' | 'column';
   wrap?: boolean;
   className?: string;
+  gap?: string;
 };
 
 const FlexBox = (props: PropsWithChildren<FlexBoxProps>) => {
@@ -26,7 +27,11 @@ const FlexBox = (props: PropsWithChildren<FlexBoxProps>) => {
   if (props.wrap) {
     className += ' wrap';
   }
-  return <div className={className}>{props.children}</div>;
+  return (
+    <div className={className} style={{ gap: props.gap }}>
+      {props.children}
+    </div>
+  );
 };
 
 export default FlexBox;
