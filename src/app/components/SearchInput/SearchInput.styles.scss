@@ -1,0 +1,9 @@
+.search-wrapper {
+  .search-input {
+    padding: .1em;
+
+    &:focus {
+      border: none;
+    }
+  }
+}

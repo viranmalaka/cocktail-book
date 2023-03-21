@@ -1,10 +1,11 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from './index';
 
-export interface CounterState {
-  randomCocktailIds: { [key: string]: string };
+export interface CocktailState {
+  randomCocktailIds: { [key: string]: string | null };
 }
 
-const initialState: CounterState = {
+const initialState: CocktailState = {
   randomCocktailIds: {},
 };
 
@@ -12,14 +13,26 @@ export const cocktailSlice = createSlice({
   name: 'cocktails',
   initialState,
   reducers: {
-    setRandomCocktailId: (state, action: PayloadAction<{ index: number; cocktailId: string }>) => {
+    setRandomCocktailId: (state, action: PayloadAction<{ index: string; cocktailId: string | null }>) => {
       const { index, cocktailId } = action.payload;
       state.randomCocktailIds = {
         ...state.randomCocktailIds,
         [index]: cocktailId,
       };
     },
+    clearAllRandomCocktailIds: (state) => {
+      state.randomCocktailIds = {};
+    },
   },
+});
+
+export const { setRandomCocktailId, clearAllRandomCocktailIds } = cocktailSlice.actions;
+
+const getStore = (store: RootState): CocktailState => store.cocktail;
+export const getRandomCocktailIds = createSelector(getStore, (store) => store.randomCocktailIds);
+
+export const getRandomCocktailIdInGivenIndex = createSelector(getRandomCocktailIds, (ids) => {
+  return (key: string) => ids[key];
 });
 
 export default cocktailSlice.reducer;

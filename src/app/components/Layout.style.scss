@@ -5,7 +5,8 @@
   background-position: center;
 
   .header-area {
-    height: 68px;
+    flex-basis: 64px;
+    flex-shrink: 0;
     -webkit-box-shadow: 0 4px 17px -9px rgba(255,255,255,1);
     -moz-box-shadow: 0 4px 17px -9px rgba(255,255,255,1);
     box-shadow: 0 4px 17px -9px rgba(255,255,255,1);
@@ -19,6 +20,7 @@
 
   .main-content {
     max-width: 1024px;
+    width: 1024px;
     margin: 0 auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.4);

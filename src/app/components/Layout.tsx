@@ -1,43 +1,33 @@
-import React, { PropsWithChildren, useState } from 'react';
+import React, { PropsWithChildren } from 'react';
 import './Layout.style.scss';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import SearchArea from './SearchArea/SearchArea';
+import FlexBox from './FlexBox';
 
 type LayoutProps = {};
 
 const Layout = (props: PropsWithChildren<LayoutProps>) => {
-  const [search, setSearch] = useState('');
-  const history = useHistory();
-
   return (
-    <div className="page-background">
+    <FlexBox className="page-background" direction="column">
       <div className="header-area">
         <div className="content h-100">
           <div className="logo-to-home-link d-flex jc-space-between ai-center h-100">
-            <div className="left">
+            <FlexBox>
               <Link to={'/'} className="header-link">
                 Home
               </Link>
-            </div>
-            <div className="right">
-              <input value={search} onChange={(e) => setSearch(e.target.value)} />
-              <button
-                onClick={() => {
-                  if (search) {
-                    history.push('/search?q=' + search);
-                  }
-                }}
-              >
-                Go
-              </button>
+            </FlexBox>
+            <FlexBox>
+              <SearchArea />
               <Link to={'/favourite'} className="header-link">
                 Favourite
               </Link>
-            </div>
+            </FlexBox>
           </div>
         </div>
       </div>
       <div className="main-content">{props.children}</div>
-    </div>
+    </FlexBox>
   );
 };
 

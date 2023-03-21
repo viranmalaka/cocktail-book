@@ -18,7 +18,7 @@ $justify-contents: 'flex-start' flex-start, 'flex-end' flex-end, 'center' center
 }
 
 // flex directions
-$flex-directions: 'row' row, 'col' column;
+$flex-directions: 'row' row, 'column' column;
 @each $name, $value in $flex-directions {
   .fd-#{$name} {
     flex-direction: $value;

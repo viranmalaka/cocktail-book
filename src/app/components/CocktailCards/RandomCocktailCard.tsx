@@ -1,24 +1,15 @@
 import React from 'react';
 import RectangleCocktailCard from './RectangleCocktailCard';
-import useRandomCocktailDetails from '../../hooks/react-query/useRandomCocktailDetails';
+import { useFetchRandomCocktail } from '../../hooks/react-query/useFetchRandomCocktail';
 
 type RandomCocktailCardProps = {
   index: string;
 };
 
 const RandomCocktailCard = ({ index }: RandomCocktailCardProps) => {
-  const { data, isFetching } = useRandomCocktailDetails(index);
+  const { data, isFetching } = useFetchRandomCocktail(index);
 
-  if (isFetching) {
-    return <div>'loading'</div>;
-  }
-
-  if (!data) {
-    return <div>no data</div>;
-  }
-
-  console.log({ data });
-  return <RectangleCocktailCard cocktail={data} />;
+  return <RectangleCocktailCard cocktail={data} isLoading={isFetching} />;
 };
 
 export default RandomCocktailCard;

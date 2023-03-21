@@ -11,6 +11,12 @@ class CocktailDbAPI {
     // return [promise, controller.abort];
     return api.get<CocktailDBResponse>('random.php').then((result) => result.data);
   }
+
+  static searchCocktail(query: string) {
+    const api = ApiService.getInstance();
+
+    return api.get<CocktailDBResponse>(`search.php${query}`).then((result) => result.data);
+  }
 }
 
 export default CocktailDbAPI;

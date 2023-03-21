@@ -1,0 +1,19 @@
+.cb-btn {
+  background-color: #ffc9c9;
+  border: 1px solid #ff3c3c;
+  padding: .3em 2.5em;
+  border-radius: 5px;
+
+  &.cb-btn-text {
+    color: #ff0000;
+  }
+
+  &.cb-btn-icon {
+    padding: .1em .3em;
+    img {
+      height: 1.2em;
+      width: 1.2em;
+      display: flex;
+    }
+  }
+}

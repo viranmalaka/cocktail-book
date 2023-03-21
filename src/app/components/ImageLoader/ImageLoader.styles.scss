@@ -1,0 +1,20 @@
+
+
+.image-loader {
+  img {
+    width: 100%
+  }
+}
+
+.img-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12em;
+  flex-direction: column;
+
+  .helper-text {
+    margin-top: 1em;
+  }
+}
+

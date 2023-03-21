@@ -1,0 +1,15 @@
+.filter-by-first-letter-wrapper {
+  display: flex;
+  align-items: center;
+  .title {
+    font-size: 1.5em;
+    margin-right: 2em;
+  }
+
+  .link {
+    margin: 0 .1em;
+    background-color: white;
+    padding: .1em .35em;
+    border-radius: 5px;
+  }
+}
