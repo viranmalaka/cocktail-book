@@ -14,13 +14,13 @@ const Layout = (props: PropsWithChildren<LayoutProps>) => {
           <div className="logo-to-home-link d-flex jc-space-between ai-center h-100">
             <FlexBox>
               <Link to={'/'} className="header-link">
-                Home
+                Cocktail Book
               </Link>
             </FlexBox>
             <FlexBox gap="3em">
               <SearchArea />
               <Link to={'/favourites'} className="header-link">
-                Favourite
+                My Favourites
               </Link>
             </FlexBox>
           </div>

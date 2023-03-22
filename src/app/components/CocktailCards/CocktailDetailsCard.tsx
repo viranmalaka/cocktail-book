@@ -1,7 +1,6 @@
 import React from 'react';
-import RectangleCocktailCard from './RectangleCocktailCard';
-import FavouriteIconWrapper from '../FavouriteIconWrapper';
 import useCocktailDetailsById from '../../hooks/react-query/useCocktailDetailsById';
+import CocktailDetailsCardWithFav from './CocktailDetailsCardWithFav';
 
 type CocktailDetailsCardProps = {
   id: string;
@@ -10,15 +9,7 @@ type CocktailDetailsCardProps = {
 const CocktailDetailsCard = ({ id }: CocktailDetailsCardProps) => {
   const { data, isFetching } = useCocktailDetailsById(id);
 
-  const cocktailId = data?.id;
-
-  return (
-    <RectangleCocktailCard
-      cocktail={data}
-      isLoading={isFetching}
-      addonActions={<FavouriteIconWrapper cocktailId={cocktailId} />}
-    />
-  );
+  return <CocktailDetailsCardWithFav cocktail={data} loading={isFetching} />;
 };
 
 export default CocktailDetailsCard;

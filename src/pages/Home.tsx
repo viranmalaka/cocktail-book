@@ -1,6 +1,6 @@
 import React from 'react';
 import FlexBox from '../app/components/FlexBox';
-import RandomCocktailCard from '../app/components/CocktailCards/RandomCocktailCard';
+import RandomCocktailDetailsCard from '../app/components/CocktailCards/RandomCocktailDetailsCard';
 import { useDispatch } from 'react-redux';
 import { clearAllRandomCocktailIds } from '../app/store/cocktail.store';
 import Button from '../app/components/Button/Button';
@@ -21,7 +21,7 @@ const Home = () => {
         {Array(5)
           .fill({})
           .map((a, index) => (
-            <RandomCocktailCard key={index} index={`key-${index}`} />
+            <RandomCocktailDetailsCard key={index} index={`key-${index}`} />
           ))}
       </FlexBox>
     </FlexBox>

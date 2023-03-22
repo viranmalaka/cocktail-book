@@ -6,10 +6,10 @@ type RandomCocktailCardProps = {
   index: string;
 };
 
-const RandomCocktailCard = ({ index }: RandomCocktailCardProps) => {
+const RandomCocktailDetailsCard = ({ index }: RandomCocktailCardProps) => {
   const { data, isFetching } = useFetchRandomCocktail(index);
 
   return <CocktailDetailsCardWithFav cocktail={data} loading={isFetching} />;
 };
 
-export default RandomCocktailCard;
+export default RandomCocktailDetailsCard;
