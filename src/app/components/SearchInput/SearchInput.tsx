@@ -29,7 +29,7 @@ const SearchInput = ({ onSubmit, initialValue }: SearchBoxProps) => {
   };
 
   return (
-    <FlexBox className="search-wrapper">
+    <FlexBox className="cb-search-wrapper">
       <input className="search-input" onChange={handleChange} value={value} onKeyDown={handleKeyDown} />
       <Button buttonType="icon" onClick={handleSubmit}>
         <img src={SearchIcon} alt="search button" />

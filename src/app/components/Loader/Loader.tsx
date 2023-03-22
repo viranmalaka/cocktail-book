@@ -7,8 +7,8 @@ type LoaderProps = {
 
 const Loader = ({ helperText }: LoaderProps) => {
   return (
-    <div className="img-loader-container">
-      <div className="img-loader" />
+    <div className="cb-img-loader-container">
+      <div className="cb-img-loader" />
       <span className="helper-text">{helperText}</span>
     </div>
   );

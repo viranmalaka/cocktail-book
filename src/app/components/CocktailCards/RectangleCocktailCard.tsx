@@ -13,7 +13,7 @@ type RectangleCocktailCardProps = {
 
 const RectangleCocktailCard = ({ cocktail, isLoading, addonActions }: RectangleCocktailCardProps) => {
   return (
-    <div className="rectangle-cocktail-card-wrapper">
+    <div className="cb-card-wrapper">
       {isLoading && <Loader />}
       {cocktail && !isLoading && (
         <Link to={`/cocktail/${cocktail.id}`} className="link">

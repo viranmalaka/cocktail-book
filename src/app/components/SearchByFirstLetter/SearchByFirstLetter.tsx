@@ -7,7 +7,7 @@ import './SearchByFirstLetterStyles.scss';
 const SearchByFirstLetter = () => {
   const englishAlphabet = getEnglishAlphabet();
   return (
-    <div className="filter-by-first-letter-wrapper">
+    <div className="cb-filter-by-first-letter-wrapper">
       <div className="title">Filter By Fist Letter: </div>
       {englishAlphabet.map((letter) => (
         <Link to={{ pathname: '/search', search: `f=${letter}` }} key={letter} className="link">

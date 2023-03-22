@@ -9,7 +9,7 @@ type NoDataViewProps = {
 
 const NoDataView = ({ text = 'No Results', image }: NoDataViewProps) => {
   return (
-    <div className="no-data-wrapper">
+    <div className="cb-no-data-wrapper">
       <div className="no-data-image">
         <img src={image || NoDataImage} alt="No data" />
       </div>

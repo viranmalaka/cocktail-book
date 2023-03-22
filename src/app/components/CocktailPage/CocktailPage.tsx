@@ -18,14 +18,14 @@ const CocktailPage = ({ id }: CocktailPageProps) => {
   }
 
   return (
-    <FlexBox className="details-page-container" gap="2em">
-      <div className="details-page-image">
+    <FlexBox className="cb-drink-page" gap="2em">
+      <div className="drink-page-image">
         <ImageLoader src={cocktail?.image} alt={cocktail?.name} />
         <div className="fav-icon">
           <FavouriteIconWrapper cocktailId={cocktail?.id} />
         </div>
       </div>
-      <div className="details-page-content">
+      <div className="drink-page-content">
         <h1 className="name">{cocktail?.name}</h1>
         <div className="id">{cocktail?.id}</div>
 

@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Search from './Search';
 import Favourites from './Favourites';
-import Layout from '../app/components/Layout';
+import Layout from '../app/components/MainLayout/Layout';
 import CocktailDetails from './CocktailDetails';
 
 const Index = () => {

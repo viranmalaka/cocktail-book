@@ -10,7 +10,7 @@ const ImageLoader = ({ wrapperClass, alt, ...props }: ImageLoaderType) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={`image-loader ${wrapperClass || ''}`}>
+    <div className={`cb-image-loader ${wrapperClass || ''}`}>
       <img {...props} alt={alt} onLoad={() => setLoaded(true)} style={{ display: loaded ? 'inline' : 'none' }} />
       {!loaded && <Loader />}
     </div>
