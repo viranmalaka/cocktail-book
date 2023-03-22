@@ -13,6 +13,7 @@ export const mapCocktailDBResponse = (drink: CocktailDrink) => {
     name: drink.strDrink,
     image: drink.strDrinkThumb,
     category: drink.strCategory,
+    instruction: drink.strInstructions,
   } as Cocktail;
 };
 

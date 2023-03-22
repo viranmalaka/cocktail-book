@@ -3,10 +3,14 @@ import FlexBox from '../app/components/FlexBox';
 import { useAppSelector } from '../app/hooks/store-hooks';
 import { getAllSelectedFavourites } from '../app/store/favourite.store';
 import CocktailDetailsCard from '../app/components/CocktailCards/CocktailDetailsCard';
+import NoDataView from '../app/components/NoDataView/NoDataView';
 
 const Favourites = () => {
   const favIds = useAppSelector(getAllSelectedFavourites);
-  console.log({ favIds });
+
+  if (favIds.length === 0) {
+    return <NoDataView text="You haven't selected any Favourites" />;
+  }
 
   return (
     <FlexBox direction="column">

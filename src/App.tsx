@@ -1,26 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Search from './pages/Search';
-import Favourites from './pages/Favourites';
-import Layout from './app/components/Layout';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Pages from './pages';
 
 function App() {
   return (
     <Router>
-      <Layout>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/search">
-            <Search />
-          </Route>
-          <Route path="/favourites">
-            <Favourites />
-          </Route>
-        </Switch>
-      </Layout>
+      <Pages />
     </Router>
   );
 }

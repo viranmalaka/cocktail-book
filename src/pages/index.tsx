@@ -1,7 +1,30 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import Search from './Search';
+import Favourites from './Favourites';
+import Layout from '../app/components/Layout';
+import CocktailDetails from './CocktailDetails';
 
 const Index = () => {
-  return <div></div>;
+  return (
+    <Layout>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/search">
+          <Search />
+        </Route>
+        <Route path="/favourites">
+          <Favourites />
+        </Route>
+        <Route path="/cocktail/:id">
+          <CocktailDetails />
+        </Route>
+      </Switch>
+    </Layout>
+  );
 };
 
 export default Index;

@@ -1,0 +1,33 @@
+.details-page-container {
+  .details-page-image {
+    width: 100%;
+    flex: 1;
+    position: relative;
+
+    .fav-icon {
+      position: absolute;
+      top: .2em;
+      right: .2em;
+    }
+  }
+
+  .details-page-content {
+    flex: 1;
+
+    .name {
+      margin-bottom: .3em;
+    }
+
+    .id {
+      color: #2f2f2f;
+    }
+
+    .category {
+      color: #8f0000;;
+    }
+
+    .instruction {
+      margin-top: .5em;
+    }
+  }
+}

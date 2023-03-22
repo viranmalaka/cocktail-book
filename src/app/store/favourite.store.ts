@@ -1,4 +1,7 @@
 import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { persistReducer, persistStore } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
 import { RootState } from './index';
 
 export interface FavouriteStore {

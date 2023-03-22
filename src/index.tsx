@@ -6,14 +6,19 @@ import { store } from './app/store';
 import { Provider } from 'react-redux';
 import './styles/global-styles.scss';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistStore } from 'redux-persist';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 const queryClient = new QueryClient();
+const persistor = persistStore(store);
 
 const renderContent = (
   <QueryClientProvider client={queryClient}>
     <Provider store={store}>
-      <App />
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
     </Provider>
   </QueryClientProvider>
 );

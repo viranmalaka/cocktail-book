@@ -8,6 +8,7 @@ type FlexBoxProps = {
   wrap?: boolean;
   className?: string;
   gap?: string;
+  flex?: string;
 };
 
 const FlexBox = (props: PropsWithChildren<FlexBoxProps>) => {
@@ -28,7 +29,7 @@ const FlexBox = (props: PropsWithChildren<FlexBoxProps>) => {
     className += ' wrap';
   }
   return (
-    <div className={className} style={{ gap: props.gap }}>
+    <div className={className} style={{ gap: props.gap, flex: props.flex }}>
       {props.children}
     </div>
   );

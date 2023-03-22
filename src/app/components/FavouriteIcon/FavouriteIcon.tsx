@@ -11,7 +11,9 @@ type FavouriteIconType = {
 };
 
 const FavouriteIcon = ({ isSelected, onClick }: FavouriteIconType) => {
-  const handleOnClick = () => {
+  const handleOnClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (onClick) {
       onClick(!isSelected);
     }
