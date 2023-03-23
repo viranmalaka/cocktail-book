@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cocktail } from '../../defs/cocktail';
+import { Cocktail } from '../../../defs/cocktail';
 import './RectangleCocktailCard.style.scss';
 import ImageLoader from '../ImageLoader/ImageLoader';
 import Loader from '../Loader/Loader';

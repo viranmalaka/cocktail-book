@@ -1,6 +1,6 @@
 import React from 'react';
-import useCocktailDetailsById from '../../hooks/react-query/useCocktailDetailsById';
-import CocktailDetailsCardWithFav from './CocktailDetailsCardWithFav';
+import useCocktailDetailsById from '../../../hooks/react-query/useCocktailDetailsById';
+import CocktailDetailsCardWithFav from '../../UI/Cards/CocktailDetailsCardWithFav';
 
 type CocktailDetailsCardProps = {
   id: string;

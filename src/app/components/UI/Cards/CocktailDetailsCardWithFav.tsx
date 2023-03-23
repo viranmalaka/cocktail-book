@@ -1,7 +1,7 @@
 import React from 'react';
 import RectangleCocktailCard from './RectangleCocktailCard';
-import FavouriteIconWrapper from '../FavouriteIconWrapper';
-import { Cocktail } from '../../defs/cocktail';
+import FavouriteIconWrapper from '../../Features/FavouriteIconWrapper/FavouriteIconWrapper';
+import { Cocktail } from '../../../defs/cocktail';
 
 type CocktailDetailsCardWithFavProps = {
   cocktail?: Cocktail;

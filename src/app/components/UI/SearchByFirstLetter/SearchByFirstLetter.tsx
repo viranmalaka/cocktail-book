@@ -1,5 +1,5 @@
 import React from 'react';
-import { getEnglishAlphabet } from '../../utils/common';
+import { getEnglishAlphabet } from '../../../utils/common';
 import { Link } from 'react-router-dom';
 
 import './SearchByFirstLetterStyles.scss';

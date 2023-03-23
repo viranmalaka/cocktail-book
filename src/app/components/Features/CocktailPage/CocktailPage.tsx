@@ -1,10 +1,10 @@
 import React from 'react';
-import useCocktailDetailsById from '../../hooks/react-query/useCocktailDetailsById';
-import Loader from '../Loader/Loader';
+import useCocktailDetailsById from '../../../hooks/react-query/useCocktailDetailsById';
+import Loader from '../../UI/Loader/Loader';
 import './CocktailPageStyles.scss';
-import FlexBox from '../FlexBox';
-import ImageLoader from '../ImageLoader/ImageLoader';
-import FavouriteIconWrapper from '../FavouriteIconWrapper';
+import FlexBox from '../../UI/FlexBox';
+import ImageLoader from '../../UI/ImageLoader/ImageLoader';
+import FavouriteIconWrapper from '../FavouriteIconWrapper/FavouriteIconWrapper';
 
 type CocktailPageProps = {
   id: string;

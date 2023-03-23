@@ -1,6 +1,6 @@
 import React from 'react';
-import { useFetchRandomCocktail } from '../../hooks/react-query/useFetchRandomCocktail';
-import CocktailDetailsCardWithFav from './CocktailDetailsCardWithFav';
+import { useFetchRandomCocktail } from '../../../hooks/react-query/useFetchRandomCocktail';
+import CocktailDetailsCardWithFav from '../../UI/Cards/CocktailDetailsCardWithFav';
 
 type RandomCocktailCardProps = {
   index: string;

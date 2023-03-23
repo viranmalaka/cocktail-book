@@ -2,8 +2,8 @@ import React from 'react';
 
 import './FavouriteIconStyles.scss';
 
-import { ReactComponent as HeartIcon } from '../../../assets/heart.svg';
-import { ReactComponent as HeartFillIcon } from '../../../assets/heart-fill.svg';
+import { ReactComponent as HeartIcon } from '../../../../assets/heart.svg';
+import { ReactComponent as HeartFillIcon } from '../../../../assets/heart-fill.svg';
 
 type FavouriteIconType = {
   isSelected: boolean;

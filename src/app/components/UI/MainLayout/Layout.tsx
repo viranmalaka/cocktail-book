@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import './Layout.style.scss';
 import { Link } from 'react-router-dom';
-import SearchArea from '../SearchArea/SearchArea';
+import SearchArea from '../../Features/SearchArea/SearchArea';
 import FlexBox from '../FlexBox';
 
 type LayoutProps = {};

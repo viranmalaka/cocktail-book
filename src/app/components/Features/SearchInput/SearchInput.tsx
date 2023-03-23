@@ -1,8 +1,8 @@
 import React, { ChangeEventHandler, KeyboardEventHandler, useState } from 'react';
-import Button from '../Button/Button';
-import SearchIcon from '../../../assets/search-icon.png';
+import Button from '../../UI/Button/Button';
+import SearchIcon from '../../../../assets/search-icon.png';
 import './SearchInput.styles.scss';
-import FlexBox from '../FlexBox';
+import FlexBox from '../../UI/FlexBox';
 
 type SearchBoxProps = {
   onSubmit: (value: string) => void;

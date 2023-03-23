@@ -1,9 +1,9 @@
 import React from 'react';
-import useSearchResults from '../hooks/react-query/useSearchResults';
-import Loader from './Loader/Loader';
-import NoDataView from './NoDataView/NoDataView';
-import FlexBox from './FlexBox';
-import CocktailDetailsCardWithFav from './CocktailCards/CocktailDetailsCardWithFav';
+import useSearchResults from '../../../hooks/react-query/useSearchResults';
+import Loader from '../../UI/Loader/Loader';
+import NoDataView from '../../UI/NoDataView/NoDataView';
+import FlexBox from '../../UI/FlexBox';
+import CocktailDetailsCardWithFav from '../../UI/Cards/CocktailDetailsCardWithFav';
 
 const SearchResults = () => {
   const { data, isLoading } = useSearchResults();

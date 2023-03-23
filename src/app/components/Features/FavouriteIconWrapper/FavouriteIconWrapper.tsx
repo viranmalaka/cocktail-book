@@ -1,7 +1,7 @@
 import React from 'react';
-import FavouriteIcon from './FavouriteIcon/FavouriteIcon';
-import { useAppDispatch, useAppSelector } from '../hooks/store-hooks';
-import { getIsSelectedGivenIdAsFavourite, setFavourite } from '../store/favourite.store';
+import FavouriteIcon from '../../UI/FavouriteIcon/FavouriteIcon';
+import { useAppDispatch, useAppSelector } from '../../../hooks/store-hooks';
+import { getIsSelectedGivenIdAsFavourite, setFavourite } from '../../../store/favourite.store';
 
 type FavouriteIconWrapperProp = {
   cocktailId?: string;

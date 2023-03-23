@@ -1,5 +1,5 @@
 import React from 'react';
-import NoDataImage from '../../../assets/no-data.svg';
+import NoDataImage from '../../../../assets/no-data.svg';
 import './NoDataViewStyle.scss';
 
 type NoDataViewProps = {
