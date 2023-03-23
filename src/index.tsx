@@ -23,11 +23,7 @@ const renderContent = (
   </QueryClientProvider>
 );
 
-// https://github.com/remix-run/react-router/issues/7870
-// react-router-dom v5 is not working with react 18 Strict Mode.
-const reactStrictModeEnabledInDev = false;
-
-root.render(reactStrictModeEnabledInDev ? <React.StrictMode>{renderContent}</React.StrictMode> : renderContent);
+root.render(<React.StrictMode>{renderContent}</React.StrictMode>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

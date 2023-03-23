@@ -4,6 +4,7 @@ import RandomCocktailDetailsCard from '../app/components/CocktailCards/RandomCoc
 import { useDispatch } from 'react-redux';
 import { clearAllRandomCocktailIds } from '../app/store/cocktail.store';
 import Button from '../app/components/Button/Button';
+import { HOME_PAGE_RANDOM_ITEMS } from '../app/utils/consts';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const Home = () => {
         <Button onClick={handleRefresh}>Refresh</Button>
       </FlexBox>
       <FlexBox justifyContent="center" direction="row" wrap>
-        {Array(5)
+        {Array(HOME_PAGE_RANDOM_ITEMS)
           .fill({})
           .map((a, index) => (
             <RandomCocktailDetailsCard key={index} index={`key-${index}`} />
