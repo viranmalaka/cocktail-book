@@ -1,7 +1,8 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+
 import FlexBox from '../app/components/UI/FlexBox';
 import RandomCocktailDetailsCard from '../app/components/Features/Cards/RandomCocktailDetailsCard';
-import { useDispatch } from 'react-redux';
 import { clearAllRandomCocktailIds } from '../app/store/cocktail.store';
 import Button from '../app/components/UI/Button/Button';
 import { HOME_PAGE_RANDOM_ITEMS } from '../app/utils/consts';

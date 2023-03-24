@@ -1,4 +1,5 @@
 import { useQuery } from 'react-query';
+
 import CocktailDbAPI from '../../service/CocktailDbAPI';
 import { mapCocktailDBResponse } from '../../utils/common';
 

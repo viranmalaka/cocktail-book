@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import './ImageLoader.styles.scss';
+
 import Loader from '../Loader/Loader';
+
+import './ImageLoader.styles.scss';
 
 type ImageLoaderType = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & {
   wrapperClass?: string;

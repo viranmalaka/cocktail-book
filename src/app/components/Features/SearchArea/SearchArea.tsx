@@ -1,7 +1,8 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import SearchInput from '../SearchInput/SearchInput';
+
 import useSearch from '../../../hooks/useSearch';
+import SearchInput from '../SearchInput/SearchInput';
 
 // TODO move all the query param keys to constants
 // I used same set of query param patterns in web browser as the API.

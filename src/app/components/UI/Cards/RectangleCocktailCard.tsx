@@ -1,20 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { Cocktail } from '../../../defs/cocktail';
-import './RectangleCocktailCard.style.scss';
 import ImageLoader from '../ImageLoader/ImageLoader';
 import Loader from '../Loader/Loader';
-import { Link } from 'react-router-dom';
+import './RectangleCocktailCard.style.scss';
 
 type RectangleCocktailCardProps = {
   cocktail?: Cocktail;
   isLoading: boolean;
   addonActions?: JSX.Element;
+  isError?: boolean;
 };
 
-const RectangleCocktailCard = ({ cocktail, isLoading, addonActions }: RectangleCocktailCardProps) => {
+const RectangleCocktailCard = ({ cocktail, isLoading, addonActions, isError }: RectangleCocktailCardProps) => {
   return (
     <div className="cb-card-wrapper">
       {isLoading && <Loader />}
+      {isError && <div className="cb-card-load-error">Loading Error</div>}
       {cocktail && !isLoading && (
         <Link to={`/cocktail/${cocktail.id}`} className="link">
           <div className="image">

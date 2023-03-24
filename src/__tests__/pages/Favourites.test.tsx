@@ -20,6 +20,12 @@ describe('favourite page', () => {
   afterEach(() => server.restoreHandlers());
   afterAll(() => server.close());
 
+  it('should show no-data view if no any fav item selected', async () => {
+    renderWithProviders(<Favourites />);
+
+    await screen.findAllByText(/You haven't selected any Favourites/i);
+  });
+
   it('should show the number of cards according to the selected favourites ids in the store', async () => {
     const store = setupStore({
       favourite: {

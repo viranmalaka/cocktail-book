@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+
 import CocktailPage from '../app/components/Features/CocktailPage/CocktailPage';
 
 const CocktailDetails = () => {

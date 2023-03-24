@@ -1,10 +1,12 @@
 import React from 'react';
+
 import useCocktailDetailsById from '../../../hooks/react-query/useCocktailDetailsById';
 import Loader from '../../UI/Loader/Loader';
-import './CocktailPageStyles.scss';
 import FlexBox from '../../UI/FlexBox';
 import ImageLoader from '../../UI/ImageLoader/ImageLoader';
 import FavouriteIconWrapper from '../FavouriteIconWrapper/FavouriteIconWrapper';
+
+import './CocktailPageStyles.scss';
 
 type CocktailPageProps = {
   id: string;

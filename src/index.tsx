@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { store } from './app/store';
 import { Provider } from 'react-redux';
-import './styles/global-styles.scss';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
+
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { store } from './app/store';
+
+import './styles/global-styles.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 const queryClient = new QueryClient();

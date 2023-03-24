@@ -1,6 +1,7 @@
 import React from 'react';
-import { getEnglishAlphabet } from '../../../utils/common';
 import { Link } from 'react-router-dom';
+
+import { getEnglishAlphabet } from '../../../utils/common';
 
 import './SearchByFirstLetterStyles.scss';
 

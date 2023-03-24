@@ -1,13 +1,14 @@
-import { useAppDispatch, useAppSelector } from '../store-hooks';
-import { getRandomCocktailIdInGivenIndex, getRandomCocktailIds, setRandomCocktailId } from '../../store/cocktail.store';
-import useRandomCocktailDetails from './useRandomCocktailDetails';
 import { useEffect } from 'react';
+
+import { getRandomCocktailIdInGivenIndex, getRandomCocktailIds, setRandomCocktailId } from '../../store/cocktail.store';
 import { getGivenIdAlreadyLoaded } from '../../utils/common';
+import { useAppDispatch, useAppSelector } from '../store-hooks';
+import useRandomCocktailDetails from './useRandomCocktailDetails';
 
 export const useFetchRandomCocktail = (index: string) => {
   const cocktailId = useAppSelector(getRandomCocktailIdInGivenIndex)(index);
   const loadedRandomCocktailIds = useAppSelector(getRandomCocktailIds);
-  const { data, isFetching, refetch, isRefetching } = useRandomCocktailDetails(index, !cocktailId);
+  const { data, isFetching, refetch, isRefetching, isError } = useRandomCocktailDetails(index, !cocktailId);
 
   const dispatch = useAppDispatch();
 
@@ -21,7 +22,7 @@ export const useFetchRandomCocktail = (index: string) => {
         dispatch(setRandomCocktailId({ index, cocktailId: data.id }));
       }
     }
-  }, [data]);
+  }, [data, index]);
 
   useEffect(() => {
     (async () => {
@@ -31,5 +32,5 @@ export const useFetchRandomCocktail = (index: string) => {
     })();
   }, [cocktailId]);
 
-  return { data, isFetching: isFetching || isRefetching };
+  return { data, isFetching: isFetching || isRefetching, isError };
 };
