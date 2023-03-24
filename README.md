@@ -1,37 +1,50 @@
 # Cocktail Book
 
+### How to run
+- execute `yarn install` in the root dir
+- execute `yarn start` in the root dir. it will start webpack server on port 3000
+- you can access the dev version via http://localhost:3000
+
 ### Tech
 - created by create-react-app (typescript)
+- redux for global state management with redux-persist
+- react-query for network fetches
+- react-router-dom for client side routing
+- jest / react-testing-library for unit testing
+- SCSS for styling
 
-### Plan
-- 3 pages -> Home, search and favourites
-- use routes to pages.
-
-- Common Components
-  - Tile / Card to show the minimized information of a cocktail
-
-- Home
-  - load random 5 apis 
-  - Refresh button should reload the same
-  - handle api loading issues.
-  - use common component to show the list of result
-  - Show images (use different sizes of image)
+### Pages and Features
+- Home (/)
+  - Load random 5 cocktail details
+    - this store the cocktail IDs in the redux store. 
+    - while loading, we checked the same cocktail details has load previously
+      - if it has loaded, we reload that specific card to get different details
+      - this guaranteed that 5 distinct cocktail will be loaded at once.
+  - Refresh button reload random data again.
   
-- Search
-  - API support multiple search critiers (name, ingredient,alcoholic, category)
-  - show the search query in the URL
+- Search (/search?s=<>)
+  - API support multiple search criteria (text and by fist name)
+  - keep the searched query in the browser URL
+  - There's a list of English Character to filter cocktail by first name 
+
+- Cocktail Details page (/cocktail/13234)
+  - shows the detailed information about the drink
 
 - Favourites
-  - Data should be saved on the localstorage
-  - the favourited items should be indicated all over the site with heart icon
-  - users can make a item favourite from anywhere in the site. 
-  - show the list of selected items in one place. 
+  - From above 4 pages, users can select a cocktail as favourite.
+  - it will be saved on the redux store
+  - we store those favourite data in the localStorage as well via redux-persist
+    - this will help the user to see the previously selected favourite list even after page refresh
+  - With a common store, with a common method we show the favourite items all over the site with a filled heart icon.
+  - This page shows only the selected items as favourite.
 
-key checklists
-- responsiveness
-- use redux as a state management lib
-- use only latest functional components and hooks
-- handle loading uis
-- handle error uis
-- handle not found / empty pages correctly
-- 
+### Developer checklists
+- [x] use redux as a state management lib
+- [x] use only latest functional components and hooks
+- [x] handle loading uis
+- [x] handle error uis
+- [x] handle not found / empty pages correctly
+- [x] unit test coverage up to 98%
+- [x] separate component as functional and UI only
+- [x] Use SCSS tricks to simplify styling
+- [ ] make the website responsive and mobile friendly
