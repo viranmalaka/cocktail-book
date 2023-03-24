@@ -1,5 +1,7 @@
 # Cocktail Book
 
+online demo will be available in [vercel app here](https://cocktail-book.vercel.app/)
+
 ### How to run
 - execute `yarn install` in the root dir
 - execute `yarn start` in the root dir. it will start webpack server on port 3000
@@ -43,6 +45,7 @@
 - [x] use only latest functional components and hooks
 - [x] handle loading uis
 - [x] handle error uis
+- [x] Use React lazy loading for code splitting and improve loading speed.
 - [x] handle not found / empty pages correctly
 - [x] unit test coverage up to 98%
 - [x] separate component as functional and UI only

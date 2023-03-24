@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Home from './Home';
-import Search from './Search';
-import Favourites from './Favourites';
 import Layout from '../app/components/UI/MainLayout/Layout';
-import CocktailDetails from './CocktailDetails';
-import ErrorPage from './error-page';
+
+const Favourites = lazy(() => import('./Favourites'));
+const CocktailDetails = lazy(() => import('./CocktailDetails'));
+const ErrorPage = lazy(() => import('./error-page'));
+const Home = lazy(() => import('./Home'));
+const Search = lazy(() => import('./Search'));
 
 const Index = () => {
   return (

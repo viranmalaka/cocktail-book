@@ -1,10 +1,11 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 
 import SearchArea from '../../Features/SearchArea/SearchArea';
 import FlexBox from '../FlexBox';
 
 import './Layout.style.scss';
+import Loader from '../Loader/Loader';
 
 type LayoutProps = {};
 
@@ -28,7 +29,9 @@ const Layout = (props: PropsWithChildren<LayoutProps>) => {
           </div>
         </div>
       </div>
-      <div className="main-content">{props.children}</div>
+      <div className="main-content">
+        <Suspense fallback={<Loader />}>{props.children}</Suspense>
+      </div>
     </FlexBox>
   );
 };
