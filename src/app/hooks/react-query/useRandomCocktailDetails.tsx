@@ -10,7 +10,7 @@ const useRandomCocktailDetails = (index: string, enabled: boolean) => {
       const response = await CocktailDbAPI.getRandomCocktail();
       return mapCocktailDBResponse(response.drinks[0]);
     },
-    { staleTime: Infinity, enabled },
+    { enabled },
   );
 };
 

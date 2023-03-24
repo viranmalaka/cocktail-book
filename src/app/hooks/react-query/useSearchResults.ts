@@ -7,17 +7,13 @@ import { mapCocktailDBResponse } from '../../utils/common';
 const useSearchResults = () => {
   const { search } = useLocation();
 
-  return useQuery(
-    ['search', search],
-    async () => {
-      const response = await CocktailDbAPI.searchCocktail(search);
-      if (response.drinks) {
-        return response.drinks.map(mapCocktailDBResponse);
-      }
-      return [];
-    },
-    { staleTime: Infinity },
-  );
+  return useQuery(['search', search], async () => {
+    const response = await CocktailDbAPI.searchCocktail(search);
+    if (response.drinks) {
+      return response.drinks.map(mapCocktailDBResponse);
+    }
+    return [];
+  });
 };
 
 export default useSearchResults;
