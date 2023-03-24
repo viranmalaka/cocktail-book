@@ -1,15 +1,15 @@
-.cb-img-loader-container {
+.cb-loader-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 12em;
   flex-direction: column;
 
-  .helper-text {
+  .cb-loader-helper-text {
     margin-top: 1em;
   }
 
-  .cb-img-loader {
+  .cb-loader {
     width: 48px;
     height: 48px;
     border: 5px solid #FFF;

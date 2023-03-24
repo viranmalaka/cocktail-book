@@ -8,7 +8,7 @@ class ApiService {
   public static getInstance(): AxiosInstance {
     if (!this.axiosInstance) {
       ApiService.axiosInstance = axios.create({
-        baseURL: 'https://www.thecocktaildb.com/api/json/v1/1/',
+        baseURL: 'https://www.thecocktaildb.com/api/json/v1/1/', // TODO move to config
       });
     }
     return this.axiosInstance!;

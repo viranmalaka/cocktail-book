@@ -5,6 +5,7 @@ import Search from './Search';
 import Favourites from './Favourites';
 import Layout from '../app/components/UI/MainLayout/Layout';
 import CocktailDetails from './CocktailDetails';
+import ErrorPage from './error-page';
 
 const Index = () => {
   return (
@@ -21,6 +22,9 @@ const Index = () => {
         </Route>
         <Route path="/cocktail/:id">
           <CocktailDetails />
+        </Route>
+        <Route path="*">
+          <ErrorPage />
         </Route>
       </Switch>
     </Layout>

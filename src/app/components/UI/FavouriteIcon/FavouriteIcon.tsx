@@ -20,7 +20,7 @@ const FavouriteIcon = ({ isSelected, onClick }: FavouriteIconType) => {
   };
   return (
     <div className="cb-fav-icon-wrapper" onClick={handleOnClick}>
-      {isSelected ? <HeartFillIcon /> : <HeartIcon />}
+      {isSelected ? <HeartFillIcon data-testid="filled-heart-icon" /> : <HeartIcon data-testid="heart-icon" />}
     </div>
   );
 };
